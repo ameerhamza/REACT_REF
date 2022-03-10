@@ -2,16 +2,16 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { createStructuredSelector } from "reselect";
 import { selectIsCollectionFetching } from "../../redux/shop/shop.selectors";
-import WithSpinner from "../with-spinner/with-spinner.styles";
+import WithSpinner from "../../components/with-spinner/with-spinner.styles";
+import CategoryPage from "./category.component";
 
-import CollectionsOverview from "./collections-overview.component";
 const mapStateToProps = createStructuredSelector({
   isLoading: selectIsCollectionFetching,
 });
 
-const CollectionsOveviewContainer = compose(
+const CategoryContainer = compose(
   connect(mapStateToProps),
   WithSpinner
-)(CollectionsOverview);
+)(CategoryPage);
 
-export default CollectionsOveviewContainer;
+export default CategoryContainer;
