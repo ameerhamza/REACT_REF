@@ -43,4 +43,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
+export const addCollectionAndDocuments = (collectionKey, ObjectsToAdd) => {
+  const collectionRef = firestore.collection(collectionKey);
+};
+
 export default firebase;
